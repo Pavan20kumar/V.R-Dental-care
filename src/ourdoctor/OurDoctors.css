@@ -1,0 +1,140 @@
+.our-doctors {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .our-doctors h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .doctor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .doctor-card {
+    width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .doctor-image img {
+    width: 70%;
+    height: 200px;
+    margin-top: 22px;
+    
+    
+  }
+  
+  .doctor-info {
+    padding: 20px;
+  }
+  
+  .doctor-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-info p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+
+
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transform: scale(1);
+    
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    background-color: rgba(194, 194, 211, 0.508);
+    color: rgb(22, 22, 31);
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    transition: var(--transition);
+  }
+  .social-icon::before{
+    transform: scale(1.1);
+    background-color: rgba(63, 162, 148, 0.261);
+    color: rgb(22, 22, 31);
+  }
+
+  .social-icon::after{
+    transform: scale(1.1);
+    background-color: rgba(3, 3, 21, 0.935);
+    color: rgb(16, 16, 89);
+  }
+
+  .social-icon:focus{
+    transform: scale(1.1);
+    background-color: rgba(35, 35, 169, 0.935);
+    color: rgb(1, 1, 22);
+  }
+
+  
+
+
+
+
+
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    background-color: rgba(125, 110, 115, 0.38);
+    color: rgb(22, 22, 31);
+  }
+  
+  .facebook:hover {
+    color: #3b5998;
+  }
+  
+  .twitter:hover {
+    color: #55acee;
+  }
+  
+  .instagram:hover {
+    color: #e4405f;
+  }
+  
+  .linkedin:hover {
+    color: #0077b5;
+  }
+  
