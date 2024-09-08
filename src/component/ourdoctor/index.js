@@ -47,20 +47,17 @@ const OurDoctors = () => {
                 <p>{doctor.description}</p>
               </div>
 
-              <div className='social-icons'>
+              
+ <div className='social-icons'>
 
-              <a href={doctor.instagarm}  className="social-icon instagram" ><FaInstagram /></a>
-              <a href={doctor.facebook} className="social-icon facebook"><FaFacebookF /></a>
-              <a href={doctor.linkedin} className="social-icon linkedin" ><FaLinkedin  /></a>
+<a href={doctor.instagarm}  className="social-icon instagram" ><FaInstagram /></a>
+<a href={doctor.facebook} className="social-icon facebook"><FaFacebookF /></a>
+<a href={doctor.linkedin} className="social-icon linkedin" ><FaLinkedin  /></a>
 
-
-
-
-
+</div>
 
 
-
-              </div>
+             
 
 
             </div>
@@ -72,3 +69,11 @@ const OurDoctors = () => {
 };
 
 export default OurDoctors;
+
+
+
+
+
+
+
+

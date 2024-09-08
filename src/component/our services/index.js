@@ -1,12 +1,14 @@
 import './services.css';
+import React from 'react';
+
 
 
 const Services = () => {
     return(
-        <a name="services">
-        <section class="services">
+        
+        <section class="services" uk-parallax="opacity: 0,5" id='services'>
     <div class="container">
-        <h5 className='text-primary'>Our Services</h5>
+        <h5 className='text-primary fs-2'>Our Services</h5>
         <h2>What We Provide</h2>
         <div class="service-cards">
             <div class="service-card">
@@ -46,7 +48,7 @@ const Services = () => {
         </div>
     </div>
 </section>
-</a>
+
 
     )
 }

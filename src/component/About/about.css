@@ -34,15 +34,14 @@
   
   .about-image {
     flex:1 ;
-    max-width: 350px;
+    width: 90%;
   
  
   }
   
   
   .about-image img {
-    width: 150%;
-    
+    width: 550%;
     border-radius: 5px;
     aspect-ratio: 2/1;
     transition-duration:5s ;
@@ -73,15 +72,15 @@
   
     .about-image {
       margin-top: 40px;
-      width: 90px;
+      width: 80%;
       position: relative;
-      left: 60px;
+      left: 40px;
     }
 
     .about-image img {
       width: 250%;
       border-radius: 5px;
-      aspect-ratio: 2/1;
+      
     }
   }
   

@@ -1,23 +1,24 @@
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.js';
+import '../node_modules/uikit/dist/css/uikit.css';
+import '../node_modules/uikit/dist/js/uikit.js';
+
 
 
 
 
 //--------------------link-pages--------------------------------------------------//
-import Nava from './Navabar';
-import Part from './Introduction/index.js';
-import Services from './our services/index.js';
-import DarkVariantExample from './carouse';
-import About from './About/index.js';
-import OurDoctors from './ourdoctor/index.js';
-import Appointment from './Appointment/index.js';
 
-
-import OurBlog from './Our Blog/index.js';
-import Footer from './Footer/index.js';
-import WhatsAppIcon from './whatsapp/index.js';
+import Nava from './component/Navabar/index.js'
+import Part from './component/Introduction/index.js'
+import Services from './component/our services/index.js'
+import OurBlog from './component/Our Blog/index.js'
+import About from './component/About/index.js'
+import OurDoctors from './component/ourdoctor/index.js'
+import Appointment from './component/Appointment/index.js'
+import Footer from './component/Footer/index.js'
+import WhatsAppIcon from './component/whatsapp/index.js'
 
 
 //--------------------link-pages-End--------------------------------------------------//
