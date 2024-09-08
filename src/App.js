@@ -19,6 +19,7 @@ import OurDoctors from './component/ourdoctor/index.js'
 import Appointment from './component/Appointment/index.js'
 import Footer from './component/Footer/index.js'
 import WhatsAppIcon from './component/whatsapp/index.js'
+import Testimonials from './component/Testimonials/index.js';
 
 
 //--------------------link-pages-End--------------------------------------------------//
@@ -40,6 +41,8 @@ function App() {
       <About></About>
 
       <OurDoctors></OurDoctors>
+
+      <Testimonials></Testimonials>
 
 
       <Appointment></Appointment>

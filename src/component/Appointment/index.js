@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './BookAppointment.css'
-import styled from "styled-components";
+
 
 
 
@@ -81,7 +81,7 @@ const Appointment = () => {
 
   return(
   
-    <section className='book-appointment' id='Appointment'>
+    <section className='book-appointment mt-5' id='Appointment'>
     <div className=" fst-italic text-white">
       <h2>Booking Appointment</h2>
     </div>

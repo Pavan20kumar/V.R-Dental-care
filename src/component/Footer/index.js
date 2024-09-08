@@ -36,7 +36,7 @@ const Footer = () => {
           <h3>Contact</h3>
           <div className="contact-info">
             <p>
-              <FaMapMarkerAlt /> <a href="#" className='text-black '>V.R Dental Care, 123 Main Street, City, State, Zip Code</a>
+              <FaMapMarkerAlt className='fs-4' /> <a href="https://" className='text-black mt-1 '>V.R Dental Care, 123 Main Street, City, State, Zip Code</a>
             </p>
             <p>
               <FaPhoneAlt/> <a href="tel:+91 8790349798 " className='text-black '>+91 8790349798</a>
@@ -79,6 +79,22 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <div className="foot-time fw-blod">
+      <h3>Opening Hours</h3>
+      <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+      <p>Saturday: 10:00 AM - 6:00 PM</p>
+      <p>Sunday: Closed</p>
+
+      
+
+
+
+
+
+      </div>
+        
+
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} V.R Dental Care</p>
       </div>
