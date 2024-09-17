@@ -25,16 +25,18 @@ const Appointment = () => {
   const [appointmentDate , setAppointmentDate] = useState('');
   const [appointmentTime, setAppointmentTime] = useState('');
   const [message, setMessage] = useState('');
+  
 
 
 
   
 
 
-  const onSubmit = (e,data) => {
-  const serviceId ="service_hx2377k";
+  const onSubmit = () => {
+  const serviceId ="service_app1h1o";
   const templateId ="template_ev5svo8";
   const publicKey ="0bJodC1FoIdOFtTEw";
+  
 
   const templateParams = {
     from_name:name,
@@ -59,7 +61,66 @@ const Appointment = () => {
   .catch((error) => {
     alert('FAILED...', error);
   });
+
+
+  const data = {
+    name : name,
+    email : email,
+    phoneNumber : phoneNumber,
+    appointmentDate : appointmentDate,
+    appointmentTime : appointmentTime,
+    message : message,
+  }
+
+  fetch('https://v-r-dental-backend.onrender.com/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
     
+  
 
 
     
