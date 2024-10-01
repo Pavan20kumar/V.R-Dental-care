@@ -5,7 +5,7 @@ import 'animate.css';
 const WhatsAppIcon = () => {
   const handleWhatsAppClick = () => {
     // Open WhatsApp with your desired phone number or message
-    const whatsappUrl = 'https://wa.me/8790349798?text=Hello';
+    const whatsappUrl = 'https://wa.me/+918790349798?text=Hello';
     window.open(whatsappUrl, '_blank');
   };
 
