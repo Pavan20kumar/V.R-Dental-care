@@ -1,5 +1,8 @@
 import React from 'react';
 import './about.css';
+import { Link } from 'react-router-dom';
+
+
 
 
 const About = () => {
@@ -20,7 +23,9 @@ const About = () => {
 </p>
 
 <div>
-  <button className='btn btn-dark'>Red More</button>
+ <Link to='/about'>
+ <button className='btn btn-dark'>Read more</button>
+ </Link>
 </div>
 
 
@@ -40,8 +45,7 @@ const About = () => {
 
           
         </div>
-
-
+        
 
       </div>
       
