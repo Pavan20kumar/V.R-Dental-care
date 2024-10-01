@@ -20,7 +20,7 @@ const Part = ( ) => {
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">
                     <div className="image ms-sm-5">
-                     <img src="./carouse-image/dd.png" alt="fourth"></img> 
+                     <img src="./carouse-image/d1.png" alt="fourth"></img> 
 
                         
                     
