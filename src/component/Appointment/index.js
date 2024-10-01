@@ -77,7 +77,7 @@ const Appointment = () => {
   
   }
 
-  fetch('http://localhost:8000/send', {
+  fetch('https://v-r-dental-backend.onrender.com/send', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
