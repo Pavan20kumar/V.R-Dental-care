@@ -77,7 +77,7 @@ const Appointment = () => {
   
   }
 
-  fetch('https://v-r-dental-backend.onrender.com/send', {
+  fetch('http://localhost:8000/send', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -254,8 +254,9 @@ onChange={(e) => setPhoneNumber(e.target.value)}
             value={time}
             onChange={(e) => setTime(e.target.value)}
             >
-              <option value="Am">Am</option>
+              <option value="Select Am/pm">Select Am/pm</option>
               <option value="Pm">pm</option>
+              <option value="Am" select>Am</option>
               
             </select>
           </div>
