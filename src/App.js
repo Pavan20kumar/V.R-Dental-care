@@ -8,18 +8,26 @@ import '../node_modules/uikit/dist/js/uikit.js';
 
 
 
+
+
+
+
+
+
 //--------------------link-pages--------------------------------------------------//
 
-import Nava from './component/Navabar/index.js'
-import Part from './component/Introduction/index.js'
-import Services from './component/our services/index.js'
-import OurBlog from './component/Our Blog/index.js'
-import About from './component/About/index.js'
-import OurDoctors from './component/ourdoctor/index.js'
-import Appointment from './component/Appointment/index.js'
-import Footer from './component/Footer/index.js'
-import WhatsAppIcon from './component/whatsapp/index.js'
-import Testimonials from './component/Testimonials/index.js';
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import Footer from './component/Footer/index.js';
+import Home from './component/Home/index.js';
+import WhatsAppIcon from './component/whatsapp';
+import AboutReadMore from './component/ReadMore about/index.js';
+
+
+
+
+
 
 
 //--------------------link-pages-End--------------------------------------------------//
@@ -30,52 +38,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Nava></Nava>
-      
-      <Part></Part>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/About" element={<AboutReadMore />} />
 
-      <Services></Services>
-
-      <OurBlog></OurBlog>
-      
-      <About></About>
-
-      <OurDoctors></OurDoctors>
-
-      <Testimonials></Testimonials>
-
-
-      <Appointment></Appointment>
-      
-
-
-
-      
-     
-     
-      <Footer></Footer>
-
-      <WhatsAppIcon></WhatsAppIcon>
-
-      
-
-
-
-
-
-
-     
-
-
-      
-
-
-
-    
-
-     
-    
-
+          
+        
+        </Routes>
+        <Footer />
+        <WhatsAppIcon />
+      </BrowserRouter>
 
 
     </div>
