@@ -25,6 +25,7 @@ const Appointment = () => {
   const [appointmentDate , setAppointmentDate] = useState('');
   const [appointmentTime, setAppointmentTime] = useState('');
   const [message, setMessage] = useState('');
+ const [time, setTime] = useState('');
   
 
 
@@ -46,6 +47,7 @@ const Appointment = () => {
     from_appointmentTime:appointmentTime,
     to_name:"V.R Dental Care",
     from_message: message,
+    from_time:time,
   };
 
   emailjs.send(serviceId, templateId, templateParams, publicKey)
@@ -57,6 +59,7 @@ const Appointment = () => {
     setAppointmentDate('');
     setAppointmentTime('');
     setMessage('');
+    setTime('');
   })
   .catch((error) => {
     alert('FAILED...', error);
@@ -70,9 +73,11 @@ const Appointment = () => {
     appointmentDate : appointmentDate,
     appointmentTime : appointmentTime,
     message : message,
+    time : time,
+  
   }
 
-  fetch('https://v-r-dental-backend.onrender.com/send', {
+  fetch('http://localhost:8000/send', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -240,12 +245,32 @@ onChange={(e) => setPhoneNumber(e.target.value)}
           </div>
           {errors.appointmentTime && <span className='bg-primary text-dark fs-5 fst-italic'>{errors.appointmentTime.message}</span>}
         </div>
+
+        <div className='col-6 col-md-4'>
+          <div className='mb-3'>
+            <label htmlFor='Select Am/pm' className='form-label'>Select Am/pm</label>
+            <select className='form-select' id='Select Am/pm'
+            {...register('time', { required: 'Select Am/pm' })}
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+            >
+              <option value="Am">Am</option>
+              <option value="Pm">pm</option>
+              
+            </select>
+          </div>
+        </div>
+        
+
+
+
+        
         
 
 
         <div className='col-6 col-md-4'>
           <div className='mb-3'>
-            <label htmlForfor="appointmenttime" className='form-label'>Messages</label>
+            <label htmlFor="appointmenttime" className='form-label'>Messages</label>
             <textarea className='form-control' cols="50" row="50"
             {...register('message', { required: 'Message is required' })}
             value={message}
