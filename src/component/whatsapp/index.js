@@ -11,6 +11,7 @@ const WhatsAppIcon = () => {
 
   return (
     <div
+    
       style={{
         position: 'fixed',
         bottom: '20px',
@@ -23,7 +24,7 @@ const WhatsAppIcon = () => {
       }}
       onClick={handleWhatsAppClick}
     >
-      <img src='./logo/whatsapp.jpg' alt="WhatsApp" className='animate__animated animate__bounce  animate__infinite	infinite' style={{ width: '70px', height: '70px' }} />
+      <img src='./logo/whatsapp.jpg' className='animate__animated animate__bounce  animate__infinite	infinite' alt="WhatsApp" style={{ width: '70px', height: '70px' }} />
     </div>
   );
 };

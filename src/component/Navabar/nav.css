@@ -24,7 +24,7 @@
     transition:all 1s;
 
 }
-#btn{
+#btns{
     cursor:pointer;
     position:relative;
     padding:10px 20px;

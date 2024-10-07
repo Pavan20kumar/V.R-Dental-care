@@ -1,6 +1,6 @@
 import React from'react';
 import './nav.css';
-import {Link} from 'react-scroll'
+import {Link} from 'react-scroll';
 function Nava(){
 
 
@@ -24,13 +24,17 @@ function Nava(){
    
    
    </Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav ms-auto fs-5 text-darck fst-italic">
+        
         <Link to='Home' smooth={true}  duration={500}  className="nav-link" id='color' >Home</Link>
+
+        
         <Link to='services' smooth={true}  duration={500}  className="nav-link" id='color' >Services</Link>
+        
         <Link to='About' smooth={true}  duration={500}  className="nav-link" id='color' >About</Link>
         
         <Link to='Blog' smooth={true}  duration={500}  className="nav-link" id='color' >Blog</Link>
@@ -40,7 +44,7 @@ function Nava(){
         <div>
         
         <Link to='Appointment' smooth={true} offset={-100} duration={500}  className="nav-link"  >
-          <button className='btn btn-primary' id="btn">Book Appointment</button>
+          <button className='btn btn-primary' id="btns">Book Appointment</button>
           </Link>
           
       

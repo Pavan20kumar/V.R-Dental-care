@@ -22,7 +22,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Footer from './component/Footer/index.js';
 import Home from './component/Home/index.js';
 import WhatsAppIcon from './component/whatsapp';
-import AboutReadMore from './component/ReadMore about/index.js';
 
 
 
@@ -41,7 +40,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/About" element={<AboutReadMore />} />
+          
 
           
         

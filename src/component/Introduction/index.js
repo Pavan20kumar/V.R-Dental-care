@@ -15,7 +15,7 @@ const Part = ( ) => {
                     <div className="heading">
                         <p>Welcome to V.R. Dental Care</p>
                         <h4>We Are Best Dental Services</h4>
-                        <para>Donec vitae libero Curabitur diam ex, non enim placerat eleifend dapibus purus sapien, aliquam erat volutpat cursus sed nisl tristique, commodo gravida lectus non</para>
+                        <span>Donec vitae libero Curabitur diam ex, non enim placerat eleifend dapibus purus sapien, aliquam erat volutpat cursus sed nisl tristique, commodo gravida lectus non</span>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">

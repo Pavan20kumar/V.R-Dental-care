@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 
 
@@ -8,49 +8,54 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     
-    <section className="about" id='About'>
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-12 col-md-6 col-lg-6'>
-
-          <div className="about-text mt-3">
-<h2>About V.R Dental Care</h2>
-<p>
-  At V.R Dental Care, we are committed to providing exceptional dental care in a warm and welcoming environment. Our team of highly skilled and experienced dentists and dental professionals use the latest techniques and state-of-the-art technology to ensure you receive the best possible treatment.
-</p>
-<p>
-  We understand that visiting the dentist can be a daunting experience for some, which is why we strive to make your experience as comfortable and stress-free as possible. From the moment you walk through our doors, you'll be greeted by our friendly staff who will guide you through every step of your treatment.
-</p>
-
-<div>
- <Link to='/about'>
- <button className='btn btn-dark'>Read more</button>
- </Link>
-</div>
-
-
-
-
-
-</div>
-
-          </div>
-
-          <div className='col-12 col-md-6 col-lg-6'>
-          <div className="about-image">
-            <img src="./about/about-1.jpeg" alt="About V.R Dental Care" />
-          </div>
-          </div>
-
-
-          
-        </div>
+    <section className="about" id="About">
+     
+      <div className="container">
+        <h5 className='text-primary fs-2'>About Us</h5>
+        <h2>V.R Dental Care</h2>
         
+        <div className="about-content">
+          <div className="about-text">
+            <p>V.R Dental Care is committed to providing exceptional dental services to our community. With our team of experienced professionals and state-of-the-art technology, we ensure that every patient receives personalized care and achieves their best smile.</p>
+            <p>Our mission is to create a comfortable and welcoming environment where patients of all ages can receive top-quality dental care. We focus on preventive dentistry and offer a wide range of services to meet all your oral health needs.</p>
+          </div>
+          <div className="about-image main-image">
+            <img src="./about/about-2.jpeg" alt="V.R Dental Care Team" />
+          </div>
+        </div>
 
+        <div className="about-features">
+          <div className="feature">
+            <img src="./about/experienced-staff.jpg" alt="Experienced Staff" />
+            <h3>Experienced Staff</h3>
+            <p>Our team of dental professionals brings years of experience and expertise to every patient interaction.</p>
+          </div>
+          <div className="feature">
+            <img src="./about/about-3.jpeg" alt="Modern Equipment" />
+            <h3>Modern Equipment</h3>
+            <p>We utilize the latest dental technology to provide efficient and comfortable treatments.</p>
+          </div>
+          <div className="feature">
+            <img src="./about/comprehensive-care.jpg" alt="Comprehensive Care" />
+            <h3>Comprehensive Care</h3>
+            <p>From routine check-ups to advanced procedures, we offer a full range of dental services.</p>
+          </div>
+          <div className="feature">
+            <img src="./about/comfortable-facility.jpg" alt="Comfortable Facility" />
+            <h3>Comfortable Facility</h3>
+            <p>Our modern, welcoming office is designed to make your dental visit as pleasant as possible.</p>
+          </div>
+        </div>
+
+        <div className="about-cta mb-3">
+          <h3>Experience the V.R Dental Care Difference</h3>
+          <p>Schedule your appointment today and see why our patients love us!</p>
+          <Link to='Appointment' smooth={true}  duration={500} >
+          <button className="cta-button ">Book an Appointment</button>
+          </Link>
+        </div>
       </div>
       
-      
-   
     </section>
     
   );

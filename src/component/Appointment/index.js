@@ -26,6 +26,7 @@ const Appointment = () => {
   const [appointmentTime, setAppointmentTime] = useState('');
   const [message, setMessage] = useState('');
  const [time, setTime] = useState('');
+ const [age, setAge] = useState('');
   
 
 
@@ -48,6 +49,8 @@ const Appointment = () => {
     to_name:"V.R Dental Care",
     from_message: message,
     from_time:time,
+
+    from_Age:age,
   };
 
   emailjs.send(serviceId, templateId, templateParams, publicKey)
@@ -60,6 +63,7 @@ const Appointment = () => {
     setAppointmentTime('');
     setMessage('');
     setTime('');
+    setAge('');
   })
   .catch((error) => {
     alert('FAILED...', error);
@@ -77,6 +81,7 @@ const Appointment = () => {
   
   }
 
+
   fetch('https://v-r-dental-backend.onrender.com/send', {
     method: 'POST',
     headers: {
@@ -84,13 +89,52 @@ const Appointment = () => {
     },
     body: JSON.stringify(data),
   })
-  .then(response => response.json())
+  .then(response => response)
   .then(data => {
     console.log('Success:', data);
   })
   .catch((error) => {
     console.error('Error:', error);
   });
+
+
+
+
+
+  
+  const send = {
+    'id': "INCREMENT",
+    name : name,
+    email : email,
+    phoneNumber : phoneNumber,
+    appointmentDate : appointmentDate,
+    appointmentTime : appointmentTime,
+    message : message,
+    time : time,
+    age : age,
+  }
+
+
+  fetch('https://sheetdb.io/api/v1/6kti1mmnfq2g9', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(send)
+})
+.then(response => response.json())
+  .then(send => {
+    console.log('Success:', send);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+
+
+
+  
 
 
 
@@ -166,6 +210,34 @@ const Appointment = () => {
           </div>
           {errors.name && <span className='bg-primary text-dark fs-5 fst-italic'>{errors.name.message}</span>}
         </div>
+
+
+
+
+        <div className='col-6 col-md-4'>
+          <div className='mb-3'>
+            <label htmlFor="age" className='form-label'>Age</label>
+            <input type="number" className='form-control'  id="age"
+
+{...register('age', {
+  required: 'age is required',
+  pattern: {
+    value: /^\d{2}$/,
+    message: 'Invalid phone number',
+  },
+})}
+value={age}
+onChange={(e) => setAge(e.target.value)}
+            
+            
+            
+            />
+          </div>
+          {errors.age && <span className='bg-primary text-dark fs-5 fst-italic'>{errors.age.message}</span>}
+        </div>
+
+
+
         
 
         
@@ -214,6 +286,26 @@ onChange={(e) => setPhoneNumber(e.target.value)}
           </div>
           {errors.phoneNumber && <span className='bg-primary text-dark fs-5 fst-italic'>{errors.phoneNumber.message}</span>}
         </div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
         <div className='col-6 col-md-4'>
@@ -261,6 +353,19 @@ onChange={(e) => setPhoneNumber(e.target.value)}
             </select>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+        
+        
         
 
 
