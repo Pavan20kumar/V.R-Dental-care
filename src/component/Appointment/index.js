@@ -418,7 +418,7 @@ onChange={(e) => setPhoneNumber(e.target.value)}
         <div className='col-6 col-md-4'>
           <div className='mb-3'>
 
-          <button className='mt-4'>
+          <button className='btn-send'>
         <div className="svg-wrapper-1">
           <div className="svg-wrapper">
             <svg

@@ -125,7 +125,7 @@
   background-color: #f0f0f0;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .about-content {
     flex-direction: column;
   }
@@ -136,5 +136,9 @@
 
   .feature {
     flex-basis: 100%;
+  }
+  .cta-button{
+    position: relative;
+    right: 42px;
   }
 }

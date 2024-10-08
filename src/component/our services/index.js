@@ -17,7 +17,7 @@ const Services = () => {
                 <p>A root canal is a dental procedure that saves a tooth by removing dead or dying nerve tissue and bacteria from .</p>
             </div>
             <div className="service-card">
-                <img src="./our-services/cavity.jpg" alt="Cosmetic Dentistry"></img>
+                <img src="./our-services/cavity.png" alt="Cosmetic Dentistry"></img>
                 <h3>cavity inspection</h3>
                 <p>Inspection of the mucosa of the oral cavity includes observing the insides of the lips and the buccal mucos the tongue.</p>
             </div>

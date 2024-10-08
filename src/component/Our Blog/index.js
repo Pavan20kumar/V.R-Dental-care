@@ -43,7 +43,7 @@ const OurBlog = () => {
     <Fragment >
     
     <div className="our-blog" id='Blog'>
-      <h2>Our Dental Care Blog</h2>
+      <h2 className='fs-2 fst-italic text-primary'>Our Dental Care Blog</h2>
       <Carousel
         currentSlide={currentSlide}
         blogPosts={blogPosts}
