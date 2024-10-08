@@ -27,6 +27,7 @@ const Appointment = () => {
   const [message, setMessage] = useState('');
  const [time, setTime] = useState('');
  const [age, setAge] = useState('');
+ const [address, setAddress] = useState('');
   
 
 
@@ -64,6 +65,7 @@ const Appointment = () => {
     setMessage('');
     setTime('');
     setAge('');
+    setAddress('');
   })
   .catch((error) => {
     alert('FAILED...', error);
@@ -78,6 +80,7 @@ const Appointment = () => {
     appointmentTime : appointmentTime,
     message : message,
     time : time,
+
   
   }
 
@@ -112,10 +115,11 @@ const Appointment = () => {
     message : message,
     time : time,
     age : age,
+    address : address,
   }
 
 
-  fetch('https://sheetdb.io/api/v1/6kti1mmnfq2g9', {
+  fetch('https://sheetdb.io/api/v1/h9ubq2i3igtzg', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
@@ -260,6 +264,22 @@ onChange={(e) => setAge(e.target.value)}
           </div>
           {errors.email && <span className='bg-primary text-dark fs-5 fst-italic'>{errors.email.message}</span>}      
         </div>
+
+
+        <div className='col-6 col-md-4'>
+          <div className='mb-3'>
+            <label htmlFor="address" className='form-label'>Address</label>
+            <textarea className='form-control' cols="50" row="50"
+            {...register('address', { required: 'Address is required' })}
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            
+            
+            
+            ></textarea>
+          </div>
+          {errors.address && <span className='bg-primary text-dark fs-5 fst-italic'>{errors.address.message}</span>}
+        </div>
         
 
         
@@ -398,7 +418,7 @@ onChange={(e) => setPhoneNumber(e.target.value)}
         <div className='col-6 col-md-4'>
           <div className='mb-3'>
 
-          <button>
+          <button className='mt-4'>
         <div className="svg-wrapper-1">
           <div className="svg-wrapper">
             <svg

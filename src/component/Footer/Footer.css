@@ -9,6 +9,8 @@ li{
   list-style: none;
   margin-top: 3%;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  text-align: left;
+  display: block;
 
   
 }
@@ -16,7 +18,15 @@ li a{
   color: #333;
   text-decoration: none;
   text-align: center;
+  display: block;
+  text-align: left;
+  
 }
+a{
+  display: block;
+  text-align: left;
+}
+
 
 .footer-container {
   display: flex;
