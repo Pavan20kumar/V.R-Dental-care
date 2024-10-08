@@ -8,7 +8,7 @@ import OurDoctors from '../ourdoctor';
 import Testimonials from '../Testimonials';
 import Appointment from '../Appointment';
 import Nava from '../Navabar/index.js';
-import AutomaticPopupAd from '../pop-up ads/index.js';
+
 
 
 
@@ -22,7 +22,7 @@ import AutomaticPopupAd from '../pop-up ads/index.js';
 function Home (){
     return(
         <div>
-            <AutomaticPopupAd></AutomaticPopupAd>
+        
             <Nava></Nava>
        
       
