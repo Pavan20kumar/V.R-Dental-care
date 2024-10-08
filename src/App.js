@@ -22,6 +22,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Footer from './component/Footer/index.js';
 import Home from './component/Home/index.js';
 import WhatsAppIcon from './component/whatsapp';
+// import AutomaticPopupAd from './component/pop-up ads/index.js';
 
 
 
@@ -38,12 +39,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        {/* <AutomaticPopupAd /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
-          
-
-          
-        
         </Routes>
         <Footer />
         <WhatsAppIcon />

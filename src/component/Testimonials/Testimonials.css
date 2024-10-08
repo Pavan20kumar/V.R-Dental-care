@@ -1,49 +1,21 @@
-.testimonials {
-    text-align: center;
-    padding: 2rem;
+
+
+  
+  .elfsight-app-1ba6acd5-1ec9-4d40-a21e-7e7edcf6c242{
+    margin-top: 22px;
+    overflow: hidden !important;
+    color: white;
+    
   }
   
-  .testimonials-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .testimonial-card {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
-    max-width: 300px;
-    padding: 1rem;
-    text-align: left;
-  }
-  
-  .testimonial-image {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  .testimonial-image img {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-  }
-  
-  .testimonial-content {
-    margin-bottom: 1rem;
-  }
-  
-  .testimonial-name {
-    font-weight: bold;
-  }
-  
-  .rating .filled {
-    color: gold;
-  }
-  
-  .rating .empty {
-    color: #ccc;
+ 
+
+  @media only screen and (max-width: 768px) {
+    .elfsight-app-1ba6acd5-1ec9-4d40-a21e-7e7edcf6c242{
+      width: 380px;
+      
+      
+    }
+    
   }
   
