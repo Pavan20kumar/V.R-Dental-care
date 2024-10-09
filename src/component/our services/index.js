@@ -6,9 +6,9 @@ import React from 'react';
 const Services = () => {
     return(
         
-        <section className="services" uk-parallax="opacity: 0,5" id='services'>
+        <section className="services" id='services'>
     <div className="container">
-        <h5 className='text-primary fs-2'>Our Services</h5>
+        <h5 className='text-primary fs-1 fst-italic'>Our Services</h5>
         <h2>What We Provide</h2>
         <div className="service-cards">
             <div className="service-card">
@@ -21,6 +21,13 @@ const Services = () => {
                 <h3>cavity inspection</h3>
                 <p>Inspection of the mucosa of the oral cavity includes observing the insides of the lips and the buccal mucos the tongue.</p>
             </div>
+
+            <div className="service-card">
+                <img src="./our-services/Live Advisor.jpg" alt="Pediatric Dentistry"></img>
+                <h3>Live Advisor</h3>
+                <p>Patients and Dentists can connect using DentalChat IOS or DentalChat Android App. Live dentist questions answered by live dentists Online Help ..</p>
+            </div>
+            
             <div className="service-card">
                 <img src="./our-services/orthodontic.jpg" alt="Orthodontics"></img>
                 <h3>Orthodontics</h3>
@@ -31,11 +38,7 @@ const Services = () => {
                 <h3>Alignment Teeth</h3>
                 <p>Our pediatric dentists are specially trained to care for children's dental needs, making their visits comfortable and enjoyable.</p>
             </div>
-            <div className="service-card">
-                <img src="./our-services/Live Advisor.jpg" alt="Pediatric Dentistry"></img>
-                <h3>Live Advisor</h3>
-                <p>Patients and Dentists can connect using DentalChat IOS or DentalChat Android App. Live dentist questions answered by live dentists Online Help ..</p>
-            </div>
+           
 
             <div className="service-card">
                 <img src="./our-services/Cosmetic Teeth.jpg" alt="Pediatric Dentistry"></img>

@@ -38,6 +38,10 @@ a{
 .footer-section {
   flex-basis: 25%;
   margin-bottom: 20px;
+  
+}
+.footer-section iframe{
+  border-radius: 5px;
 }
 
 .footer-section h3 {

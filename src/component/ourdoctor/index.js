@@ -31,7 +31,7 @@ const OurDoctors = () => {
   return (
     <section className="our-doctors">
       <div className="container">
-        <h5 className='text-primary'>Our Doctors</h5>
+        <h5 className='text-primary fst-italic fs-1 fw-blod'>Our Doctors</h5>
         <h2>Best Expert Dentist</h2>
         <div className="doctor-cards">
           {doctors.map((doctor, index) => (

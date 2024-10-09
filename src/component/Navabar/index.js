@@ -17,7 +17,7 @@ function Nava(){
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top z-3 ">
   <div className="container-fluid">
-   <Link to='Home' smooth={true}  duration={500}  className="navbar-brand"  >
+   <Link className="navbar-brand"  >
    <img src="./logo/logo.png" width="30" height="30" className="d-inline-block align-top ml-3 me-3" alt="" />
         <span className='g-3'>V.R </span>
         <span className='det'>Dental Care</span>
