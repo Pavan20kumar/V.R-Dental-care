@@ -8,6 +8,7 @@ import OurDoctors from '../ourdoctor';
 import Testimonials from '../Testimonials';
 import Appointment from '../Appointment';
 import Nava from '../Navabar/index.js';
+import Footer from '../Footer/index.js';
 
 
 
@@ -42,6 +43,7 @@ function Home (){
 
 
       <Appointment></Appointment>
+      <Footer></Footer>
       
 
 

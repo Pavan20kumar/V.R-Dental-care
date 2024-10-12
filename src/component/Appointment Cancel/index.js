@@ -1,0 +1,160 @@
+import {useState } from 'react'
+import { Link } from 'react-router-dom';
+import './cancel.css'
+
+function AppointmentCancel (){
+    const [appointment, setAppointment] = useState([]);
+    const [searchValue, setSearchValue] = useState('');
+    
+    
+    
+
+    const oncancel = (id) => {
+        fetch(`https://sheetdb.io/api/v1/h9ubq2i3igtzg/id/${id}`, {
+            method: 'DELETE',
+        })
+            .then(response => response.json())
+            .then(data => {
+                setAppointment(appointment.filter(item => item.id !== id));
+            })
+            .catch(error => console.error('Error:', error));
+
+
+
+              //send email cancel appointment
+             
+
+              fetch('https://v-r-dental-backend.onrender.com/cancel', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+
+                
+                    email: appointment.find(item => item.id === id).email,
+                    name: appointment.find(item => item.id === id).name,
+                    appointmentDate: appointment.find(item => item.id === id).appointmentDate,
+                    appointmentTime: appointment.find(item => item.id === id).appointmentTime,
+                    message:'appointment date is cancelled ',
+                    
+                }),
+              })
+              .then(response => response)
+              .then(data => {
+                console.log('Success:', data);
+                alert('Appointment canceled successfully!');
+                
+              })
+              .catch((error) => {
+                console.error('Error:', error);
+                alert('Failed to cancel appointment.');
+
+              });
+
+           
+
+
+          
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    }
+     
+//search fetch
+   const onSubmit = (e) => {
+        e.preventDefault();
+        setSearchValue('');
+        fetch(`https://sheetdb.io/api/v1/h9ubq2i3igtzg/search?name=${searchValue}`)
+            .then(response => response.json())
+            .then(data => setAppointment(data))
+            .catch(error => console.error('Error:', error));
+
+
+
+    }
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+   
+
+        
+
+    return(
+        <div>
+            <form onSubmit={onSubmit}>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-12 mt-3'>
+                            <label htmlFor="search" className='form-label'>Search Name</label>
+                            <input type="text" className='form-control' placeholder='Search Name' onChange={(e)=> setSearchValue(e.target.value)} />
+                        </div>
+                        <div className='col-12'>
+                            <button className='btn btn-primary mt-3'>Search</button>
+                        </div>
+                    </div>'
+                </div>
+            </form>
+
+
+            <div className='mt-5'>
+               <div className=''>
+                {
+                    appointment.map((item) =>(
+                        <div key={item.id} className='card box-border'>
+                            <div className='card-body'>
+                                <h5 className='card-title'><span className='spanhh'>Name:</span> {item.name}</h5>
+                                <p className='card-text'><span className='spanhh'>Age:</span> {item.age}</p>
+                                <p className='card-text'><span className='spanhh'>Email:</span> {item.email}</p>
+                                <p className='card-text'><span className='spanhh'>Adress:</span> {item.address}</p>
+                                <p className='card-text'><span className='spanhh'>PhoneNumber:</span> {item.phoneNumber}</p>
+                                <p className='card-text'><span className='spanhh'>AppointmentDate:</span> {item.appointmentDate}</p>
+                                <p className='card-text'><span className='spanhh'>AppointmentTime:</span> {item.appointmentTime}{item.time}</p>
+                                <p className='card-text'><span className='spanhh'>Meassage:</span> {item.message}</p>
+                                <div>
+                                <button className='btn btn-danger m-2' onClick={() => oncancel(item.id)}>Cancel</button>
+                                <Link to={`/edit/${item.id}`} className='btn btn-primary'>Edit</Link>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+               </div>
+               
+            </div>
+
+            
+        </div>
+    )
+}
+export default AppointmentCancel;
+    
+

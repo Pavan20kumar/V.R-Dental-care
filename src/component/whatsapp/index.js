@@ -1,8 +1,8 @@
 import React from 'react';
 import 'animate.css';
-
-
 const WhatsAppIcon = () => {
+ 
+ 
   const handleWhatsAppClick = () => {
     // Open WhatsApp with your desired phone number or message
     const whatsappUrl = 'https://wa.me/+918790349798?text=Hello';
@@ -10,6 +10,7 @@ const WhatsAppIcon = () => {
   };
 
   return (
+    <div>
     <div
     
       style={{
@@ -26,7 +27,55 @@ const WhatsAppIcon = () => {
     >
       <img src='./logo/whatsapp.jpg' className='animate__animated animate__bounce  animate__infinite	infinite' alt="WhatsApp" style={{ width: '70px', height: '70px' }} />
     </div>
+
+    
+
+
+
+    
+
+
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+    </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default WhatsAppIcon;

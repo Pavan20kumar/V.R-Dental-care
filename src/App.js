@@ -19,10 +19,15 @@ import '../node_modules/uikit/dist/js/uikit.js';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import Footer from './component/Footer/index.js';
+
 import Home from './component/Home/index.js';
 import WhatsAppIcon from './component/whatsapp';
 // import AutomaticPopupAd from './component/pop-up ads/index.js';
+import AppointmentCancel from './component/Appointment Cancel/index.js';
+import AppointmentUpdate from './component/Appointment Update/index.js';
+
+
+
 
 
 
@@ -42,15 +47,23 @@ function App() {
         {/* <AutomaticPopupAd /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/Cancel" element={<AppointmentCancel />} />
+          <Route exact path="/edit/:id" element={<AppointmentUpdate />} />
+          
         </Routes>
-        <Footer />
+        
         <WhatsAppIcon />
       </BrowserRouter>
+
+      
 
 
     </div>
   );
 }
+
+
+
 
 
 export default App;

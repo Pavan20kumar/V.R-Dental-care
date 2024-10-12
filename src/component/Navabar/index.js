@@ -1,18 +1,17 @@
 import React from'react';
 import './nav.css';
 import {Link} from 'react-scroll';
+
+
+
+
+
+
+
+
 function Nava(){
 
-
-
-
-
-
-
-
-
-
-
+   
     return(
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top z-3 ">
@@ -46,9 +45,6 @@ function Nava(){
         <Link to='Appointment' smooth={true} offset={-100} duration={500}  className="nav-link"  >
           <button className='btn btn-primary' id="btns">Book Appointment</button>
           </Link>
-          
-      
-        
         </div>
       </div>
     </div>
@@ -58,5 +54,9 @@ function Nava(){
 
     )
 }
+
+
+
+
 
 export default Nava;
