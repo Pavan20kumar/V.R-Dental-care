@@ -10,7 +10,7 @@ function AppointmentCancel (){
     
 
     const oncancel = (id) => {
-        fetch(`https://sheetdb.io/api/v1/h9ubq2i3igtzg/id/${id}`, {
+        fetch(`https://sheetdb.io/api/v1/pe52vd9b9m9ex/id/${id}`, {
             method: 'DELETE',
         })
             .then(response => response.json())
@@ -81,7 +81,7 @@ function AppointmentCancel (){
    const onSubmit = (e) => {
         e.preventDefault();
         setSearchValue('');
-        fetch(`https://sheetdb.io/api/v1/h9ubq2i3igtzg/search?name=${searchValue}`)
+        fetch(`https://sheetdb.io/api/v1/pe52vd9b9m9ex/search?name=${searchValue}`)
             .then(response => response.json())
             .then(data => setAppointment(data))
             .catch(error => console.error('Error:', error));
@@ -157,4 +157,3 @@ function AppointmentCancel (){
 }
 export default AppointmentCancel;
     
-

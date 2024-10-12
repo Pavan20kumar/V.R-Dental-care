@@ -57,7 +57,7 @@ const AppointmentUpdate = () => {
   }
 
  //update
-  fetch(`https://sheetdb.io/api/v1/h9ubq2i3igtzg/id/${id}`, {
+  fetch(`https://sheetdb.io/api/v1/pe52vd9b9m9ex/id/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

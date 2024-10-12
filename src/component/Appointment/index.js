@@ -119,7 +119,7 @@ const Appointment = () => {
   }
 
 
-  fetch('https://sheetdb.io/api/v1/h9ubq2i3igtzg', {
+  fetch('https://sheetdb.io/api/v1/pe52vd9b9m9ex', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
