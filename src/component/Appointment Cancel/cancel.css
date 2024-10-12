@@ -6,7 +6,7 @@
     left: 25%;
 }
 
-.spanhh{
+.side-heading{
    color: black;
    font-weight: bold;
    position: absolute;
@@ -22,7 +22,7 @@
         position: relative;
         left: 1%;
     }
-    .spanhh{
+    .side-heading{
         color: black;
         font-weight: bold;
         position: absolute;
@@ -30,6 +30,9 @@
 
         
      
+     }
+     .gap{
+        margin-left: 32px;
      }
 
 }

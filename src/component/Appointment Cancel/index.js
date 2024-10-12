@@ -131,14 +131,14 @@ function AppointmentCancel (){
                     appointment.map((item) =>(
                         <div key={item.id} className='card box-border'>
                             <div className='card-body'>
-                                <h5 className='card-title'><span className='spanhh'>Name:</span> {item.name}</h5>
-                                <p className='card-text'><span className='spanhh'>Age:</span> {item.age}</p>
-                                <p className='card-text'><span className='spanhh'>Email:</span> {item.email}</p>
-                                <p className='card-text'><span className='spanhh'>Adress:</span> {item.address}</p>
-                                <p className='card-text'><span className='spanhh'>PhoneNumber:</span> {item.phoneNumber}</p>
-                                <p className='card-text'><span className='spanhh'>AppointmentDate:</span> {item.appointmentDate}</p>
-                                <p className='card-text'><span className='spanhh'>AppointmentTime:</span> {item.appointmentTime}{item.time}</p>
-                                <p className='card-text'><span className='spanhh'>Meassage:</span> {item.message}</p>
+                                <h5 className='card-title'><span className='side-heading'>Name:</span> {item.name}</h5>
+                                <p className='card-text'><span className='side-heading'>Age:</span> {item.age}</p>
+                                <p className='card-text'><span className='side-heading'>Email:</span> <span className='gap'>{item.email}</span></p>
+                                <p className='card-text'><span className='side-heading'>Adress:</span> {item.address}</p>
+                                <p className='card-text'><span className='side-heading'>PhoneNumber:</span> {item.phoneNumber}</p>
+                                <p className='card-text'><span className='side-heading'>AppointmentDate:</span><span className='gap'>{item.appointmentDate}</span></p>
+                                <p className='card-text'><span className='side-heading'>AppointmentTime:</span> <span className='gap'>{item.appointmentTime}</span>{item.time}</p>
+                                <p className='card-text'><span className='side-heading'>Meassage:</span> {item.message}</p>
                                 <div>
                                 <button className='btn btn-danger m-2' onClick={() => oncancel(item.id)}>Cancel</button>
                                 <Link to={`/edit/${item.id}`} className='btn btn-primary'>Edit</Link>
